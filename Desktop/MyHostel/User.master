@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+<%@ Register Src="UserTop.ascx" TagName="usertop" TagPrefix="uc4" %>
+<%@ Register Src="UserLeft.ascx" TagName="userleft" TagPrefix="uc5" %>
+<%@ Register Src="UserRight.ascx" TagName="userright" TagPrefix="uc6" %>
+<%@ Register Src="UserBottom.ascx" TagName="userbottom" TagPrefix="uc7" %>
+<%@ Register Src="Bottom.ascx" TagName="bottom" TagPrefix="uc3" %>
+<%@ Register Src="Top.ascx" TagName="top" TagPrefix="uc1" %>
+<%@ Register Src="Left.ascx" TagName="left" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+    <table width="100%" border = "1" cellspacing = "0" style="background-image: url(photo/backgrnd[2].gif)">
+    <tr>
+     <td colspan="3">
+         <uc4:usertop ID="Usertop1" runat="server" />
+         
+     </td>
+   </tr>
+   <tr>
+   <td width = "20%" valign = "top" >
+       <uc5:userleft id="Userleft1" runat="server">
+       </uc5:userleft></td>
+   <td width = "60%">
+   <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder></td>
+      <td width = "20%" height = "100%">
+          <uc6:userright ID="Userright1" runat="server" />
+      
+      </td>  
+   </tr>
+   <tr>
+   <td colspan="3">
+       <uc7:userbottom ID="Userbottom1" runat="server" />
+       
+   </td>
+   </tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>
