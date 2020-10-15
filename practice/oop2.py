@@ -9,10 +9,12 @@ def ran_id():
 
 class Account:
     emp_ids=[]
+
     def __init__(self,name,email):
         self.e_id=None
         self.name=name
         self.email=email
+
     def add_id(self):
         while True:
             x=ran_id()
@@ -21,6 +23,7 @@ class Account:
                 self.emp_ids.append(x)
                 break
         return self.e_id
+
     def get_details(self):
         print(" ".join(["-" for i in range(10)]))
         print("ID: ",self.e_id)
